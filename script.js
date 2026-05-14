@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Update this value if the public GitHub handle changes.
-  const githubUsername = "danielragheb";
+  const githubUsername = "Daniel-Ragheb";
   const fallbackProjects = [
     {
       name: "DHL Workflow Improvement System",
