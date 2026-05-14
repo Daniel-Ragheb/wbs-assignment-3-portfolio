@@ -1,0 +1,517 @@
+:root {
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #3f4146;
+  --primary: #1d4ed8;
+  --primary-soft: #dbeafe;
+  --border: #dbe3ef;
+  --shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #5d5d61;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page-shell {
+  width: min(1150px, calc(100% - 40px));
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+}
+
+.sidebar,
+.section-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 22px;
+}
+
+.sidebar {
+  padding: 28px;
+  position: sticky;
+  top: 20px;
+  align-self: start;
+}
+
+.profile-card {
+  text-align: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  border: 5px solid #587b9e;
+  background: #f9fbff;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.title {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.sidebar-section {
+  margin-top: 26px;
+}
+
+.sidebar-nav {
+  margin-top: 20px;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav li + li {
+  margin-top: 10px;
+}
+
+.nav-link {
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active-link {
+  background: var(--primary-soft);
+  text-decoration: none;
+}
+
+.sidebar-section h2,
+.hero h2,
+.timeline-head h3,
+.mini-card h3 {
+  line-height: 1.3;
+}
+
+.sidebar-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+
+.contact-list,
+.tag-list {
+  list-style: none;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-list li {
+  background: var(--primary-soft);
+  color: #1e3a8a;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-card {
+  padding: 30px;
+}
+
+.section-label {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.82rem;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.hero p:last-child,
+.timeline-item p,
+.mini-card p,
+.subtitle {
+  color: var(--muted);
+}
+
+.timeline-item + .timeline-item {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.timeline-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.timeline-head span {
+  color: var(--primary);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.mini-card {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  background: #fbfdff;
+}
+
+/* Assignment 2 additions */
+.section-heading-with-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px; /* adds breathing room */
+  flex-wrap: wrap;
+  margin-bottom: 12px; /* space below header */
+}
+
+.main-section-header .section-label {
+  margin-bottom: 0;
+}
+
+.hero-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.action-btn,
+.mode-toggle-btn,
+.project-details-btn,
+.submit-btn {
+  border: 1px solid var(--border);
+  background: #eef4ff;
+  color: #1e3a8a;
+  padding: 9px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.action-btn,
+.mode-toggle-btn,
+.project-details-btn {
+  margin-top: 4px;
+}
+
+.action-btn {
+  margin-left: auto;
+}
+
+.action-btn:hover,
+.mode-toggle-btn:hover,
+.project-details-btn:hover,
+.submit-btn:hover {
+  background: #dbeafe;
+}
+
+.mode-toggle-btn {
+  white-space: nowrap;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--text);
+  background: #ffffff;
+}
+
+.welcome-message {
+  margin-top: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  display: none;
+}
+
+.github-loading {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.github-status {
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.github-status.success {
+  color: #166534;
+}
+
+.github-status.warning {
+  color: #92400e;
+}
+
+.github-repo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 210px;
+}
+
+.github-repo-card h3 {
+  word-break: break-word;
+}
+
+.github-repo-card p {
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.repo-language,
+.repo-stars {
+  display: inline-block;
+  background: var(--primary-soft);
+  color: var(--primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.repo-card-actions {
+  margin-top: 14px;
+}
+
+.repo-card-actions .action-btn {
+  display: block;
+  margin-left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.project-details {
+  display: none;
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #fbfdff;
+}
+
+.project-details.open {
+  display: block;
+}
+
+.form-group + .form-group {
+  margin-top: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.submit-btn {
+  margin-top: 18px;
+}
+
+.form-message {
+  margin-top: 14px;
+  font-weight: 700;
+  display: none;
+}
+
+.form-message.error {
+  color: #b91c1c;
+  display: block;
+}
+
+.form-message.success {
+  color: #166534;
+  display: block;
+}
+
+.hidden-section {
+  display: none;
+}
+
+/* Dark mode */
+body.dark-mode {
+  --card: #111827;
+  --text: #f3f4f6;
+  --muted: #cfd6df;
+  --primary: #93c5fd;
+  --primary-soft: #1e3a8a;
+  --border: #2b3647;
+  --shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
+  background: #0b1120;
+}
+
+body.dark-mode .mini-card,
+body.dark-mode .project-details,
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background: #0f172a;
+}
+
+
+body.dark-mode .tag-list li {
+  background: #1e3a8a;
+  color: #f8fbff;
+}
+
+body.dark-mode .nav-link.active-link,
+body.dark-mode .nav-link:hover {
+  background: #1e3a8a;
+  color: #f8fbff;
+}
+
+body.dark-mode .github-status.success {
+  color: #86efac;
+}
+
+body.dark-mode .github-status.warning {
+  color: #fbbf24;
+}
+
+body.dark-mode .repo-language,
+body.dark-mode .repo-stars {
+  background: #172554;
+  color: #93c5fd;
+}
+
+body.dark-mode .action-btn,
+body.dark-mode .mode-toggle-btn,
+body.dark-mode .project-details-btn,
+body.dark-mode .submit-btn {
+  background: #172554;
+  color: #dbeafe;
+}
+
+body.dark-mode .action-btn:hover,
+body.dark-mode .mode-toggle-btn:hover,
+body.dark-mode .project-details-btn:hover,
+body.dark-mode .submit-btn:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 920px) {
+  .page-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .hero-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 620px) {
+  .page-shell {
+    width: min(100% - 24px, 1000px);
+    margin: 20px auto;
+  }
+
+  .section-card,
+  .sidebar {
+    padding: 22px;
+  }
+
+  h1,
+  .hero h2 {
+    font-size: 1.65rem;
+  }
+
+  .timeline-head,
+  .grid-two {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .timeline-head span {
+    white-space: normal;
+  }
+
+  .section-heading-with-action {
+    align-items: flex-start;
+  }
+}
